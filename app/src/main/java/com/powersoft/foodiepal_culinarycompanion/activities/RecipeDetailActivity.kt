@@ -22,13 +22,13 @@ class RecipeDetailActivity : AppCompatActivity() {
         binding.foodName.text = recipe?.foodName
         binding.tvTime.text = recipe?.foodDuration
         binding.foodDescription.text = recipe?.description
-//        if (recipe?.imagePath == null) {
-//            if (recipe != null) {
-//                binding.imgFood.setImageResource(recipe.image)
-//            }
-//        }else{
-//            binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
-//        }
+        if (recipe?.imagePath == null) {
+            if (recipe != null) {
+                binding.imgFood.setImageResource(recipe.image)
+            }
+        }else{
+            binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
+        }
         if (recipe != null) {
             binding.ratingBar.rating = recipe.userRating
         }

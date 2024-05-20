@@ -34,15 +34,15 @@
                 android:src="@drawable/arrow_left"
                 app:tint="@color/blue" />
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imgFood"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:adjustViewBounds="true"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:elevation="3dp"-->
-<!--                android:src="@drawable/ic_noodle" />-->
+            <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="10dp"
+                android:elevation="3dp"
+                android:src="@drawable/ic_noodle" />
 
             <TextView
                 android:id="@+id/foodName"

@@ -54,7 +54,7 @@ class ContactFragment : Fragment() {
     }
 
     private fun openEmail() {
-        val recipientEmail = "romankhadka@gmail.com"
+        val recipientEmail = "sophiya.basel85@gmail.com"
         val subject = ""
         val body = ""
 
@@ -69,7 +69,7 @@ class ContactFragment : Fragment() {
 
     private fun openDialer() {
         val dialIntent = Intent(Intent.ACTION_DIAL)
-        dialIntent.data = Uri.parse("tel:6412339685")
+        dialIntent.data = Uri.parse("tel:9860191112")
         startActivity(dialIntent)
     }
 
@@ -78,11 +78,11 @@ class ContactFragment : Fragment() {
             Contact(
                 R.drawable.linkedin,
                 "LinkedIn Profile",
-                "https://www.linkedin.com/in/roman-khadka"
+                "https://www.linkedin.com/in/sophiya-basel/"
             ),
-            Contact(R.drawable.ic_phone, "Phone", "+1 641 233 9685"),
-            Contact(R.drawable.ic_location, "Address", "Fairfield, IA, USA"),
-            Contact(R.drawable.ic_email, "Email", "romankhadka@gmail.com"),
+            Contact(R.drawable.ic_phone, "Phone", "+977 986 019 1112"),
+            Contact(R.drawable.ic_location, "Address", "Gongabu, Kathmandu, Nepal"),
+            Contact(R.drawable.ic_email, "Email", "sophiya.basel85@gmail.com"),
         )
     }
 }

@@ -42,11 +42,11 @@ class RecipeAdapter(private var recipes: List<Recipe>) :
         fun bind(recipe: Recipe) {
             binding.foodName.text = recipe.foodName
             binding.tvTime.text = recipe.foodDuration
-//            if (recipe.imagePath == null) {
-//                binding.imgFood.setImageResource(recipe.image)
-//            }else{
-//                binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
-//            }
+            if (recipe.imagePath == null) {
+                binding.imgFood.setImageResource(recipe.image)
+            }else{
+                binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
+            }
             binding.ratingBar.rating = recipe.userRating
             binding.tvRating.text = recipe.userRating.toString()
         }

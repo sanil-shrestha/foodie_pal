@@ -61,20 +61,20 @@ class BlogFragment : Fragment() {
     private fun generateSampleBlogPost() {
         blogList.add(
             BlogPost(
-                "The Verge",
-                "The Verge is a blog focused on examining how technology will change the future."
+                "Serious Eats",
+                "Serious Eats is a blog focused on delivering the best food recipes, techniques, and guides. They believe in rigorous testing to understand the science of cooking."
             )
         )
         blogList.add(
             BlogPost(
-                "Engadget",
-                "Launched by Peter Rojas, Engadget is a technology blog providing reviews of gadgets and consumer electronics as well as the latest news in the tech world."
+                "Smitten Kitchen",
+                "Smitten Kitchen is a food blog providing comfort food recipes with a twist. The blog is known for its detailed step-by-step cooking guides and beautiful food photography."
             )
         )
         blogList.add(
             BlogPost(
-                "Gizmodo",
-                "Gizmodo is another technology blog created by Peter Rojas. The blog publishes news and opinion pieces on technology, gadgets, science, entertainment, culture, and the environment."
+                "Minimalist Baker",
+                "Minimalist Baker is a food blog that shares plant-based recipes requiring 10 ingredients or less, 1 bowl, or 30 minutes or less to prepare. The blog is all about making food simple and approachable."
             )
         )
     }

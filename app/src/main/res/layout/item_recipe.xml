@@ -73,13 +73,13 @@
 
     </androidx.cardview.widget.CardView>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imgFood"-->
-<!--        android:layout_width="150dp"-->
-<!--        android:layout_height="120dp"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:elevation="3dp"-->
-<!--        android:adjustViewBounds="true"-->
-<!--        android:src="@drawable/ic_noodle" />-->
+    <ImageView
+        android:id="@+id/imgFood"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:elevation="3dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_noodle" />
 
 </RelativeLayout>
