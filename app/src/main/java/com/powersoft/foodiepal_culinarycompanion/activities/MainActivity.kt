@@ -3,6 +3,7 @@ package com.powersoft.foodiepal_culinarycompanion.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.tabs.TabLayoutMediator
@@ -39,7 +40,21 @@ class MainActivity : AppCompatActivity() {
         if (!preferenceManager.isLoggedIn()) {
             startLoginActivity()
         }
+        val logoutButton: Button = findViewById(R.id.btn_logout)
+        logoutButton.setOnClickListener {
+            logout()
+        }
         setupTabLayout()
+    }
+
+    private fun logout() {
+        val preferenceManager = PreferenceManager.getInstance(this)
+
+        preferenceManager.logout()
+
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
     private fun setupTabLayout() {
