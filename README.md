@@ -15,6 +15,7 @@ FoodiePal Culinary Companion is an Android application developed in Kotlin and J
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 * You have installed the latest version of [Android Studio](https://developer.android.com/studio)
+* You have gradle installed in your system.
 
 ## Framework and Tools
 The application is developed using the following frameworks and tools:
@@ -33,7 +34,7 @@ The application currently does not use a database for data persistence. Instead,
 2. Open the project in Android Studio.
 3. Clean build the project by running the following command:
     ```bash
-    ./gradlew clean build
+    gradle clean build
     ```
 4. Run the app using the built-in Android emulator or on your connected Android device.
 
