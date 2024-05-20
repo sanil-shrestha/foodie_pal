@@ -1,5 +1,8 @@
 # FoodiePal Culinary Companion
 
+## Contributors
+- [Sophiya Basel](sophiyabasel01)
+
 ## Description
 FoodiePal Culinary Companion is an Android application developed in Kotlin and Java. It's a comprehensive guide for food lovers, providing features like Recipes, Meal Planner, Blog, Contact, and About Me sections.
 
