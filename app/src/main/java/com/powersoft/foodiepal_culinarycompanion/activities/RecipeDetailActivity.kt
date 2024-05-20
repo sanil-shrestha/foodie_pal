@@ -17,22 +17,28 @@ class RecipeDetailActivity : AppCompatActivity() {
 
         val recipe = intent.getParcelableExtra<Recipe>("recipe")
 
-        // Display the recipe details
+        binding.imgBack.setOnClickListener { super.onBackPressed() }
+
         binding.foodName.text = recipe?.foodName
         binding.tvTime.text = recipe?.foodDuration
         binding.foodDescription.text = recipe?.description
-        if (recipe?.imagePath == null) {
-            if (recipe != null) {
-                binding.imgFood.setImageResource(recipe.image)
-            }
-        }else{
-            binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
-        }
+//        if (recipe?.imagePath == null) {
+//            if (recipe != null) {
+//                binding.imgFood.setImageResource(recipe.image)
+//            }
+//        }else{
+//            binding.imgFood.setImageURI(Uri.parse(recipe.imagePath))
+//        }
         if (recipe != null) {
             binding.ratingBar.rating = recipe.userRating
         }
         if (recipe != null) {
             binding.tvRating.text = recipe.userRating.toString()
         }
+        val ingredientsList = recipe?.ingredients
+        val ingredientsText = ingredientsList?.mapIndexed { index, ingredient ->
+            "${index + 1}. $ingredient"
+        }?.joinToString(separator = ", ")
+        binding.tvIngredients.text = "Ingredients:\n \n$ingredientsText"
     }
 }

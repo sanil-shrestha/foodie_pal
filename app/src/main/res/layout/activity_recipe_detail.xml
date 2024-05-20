@@ -8,6 +8,7 @@
     android:padding="12dp"
     tools:ignore="ContentDescription,HardcodedText">
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,21 +24,32 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-
             <ImageView
-                android:id="@+id/imgFood"
-                android:layout_width="150dp"
-                android:layout_height="120dp"
-                android:layout_centerInParent="true"
-                android:adjustViewBounds="true"
-                android:elevation="3dp"
-                android:src="@drawable/ic_noodle" />
+                android:id="@+id/imgBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/arrow_left"
+                app:tint="@color/blue" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imgFood"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:elevation="3dp"-->
+<!--                android:src="@drawable/ic_noodle" />-->
 
             <TextView
                 android:id="@+id/foodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand_bold"
+                android:layout_marginTop="10dp"
                 android:text="Vegetable Noodles"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -46,7 +58,7 @@
                 android:id="@+id/tvTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="14dp"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/quicksand"
                 android:text="20 mins"
@@ -55,10 +67,19 @@
                 app:drawableStartCompat="@drawable/ic_time" />
 
             <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:layout_marginTop="14dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+            <TextView
                 android:id="@+id/foodDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="14dp"
                 android:drawablePadding="8dp"
                 android:fontFamily="@font/quicksand"
                 android:text="20 mins"
@@ -69,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <RatingBar

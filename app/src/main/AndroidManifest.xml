@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -31,7 +31,13 @@
         </activity>
         <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.LoginActivity"/>
         <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.RegisterActivity"/>
-        <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.AddRecipeActivity" />
+        <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.AddRecipeActivity"
+            android:windowSoftInputMode="adjustResize" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.AddAboutActivity" />
         <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.AddBlogActivity" />
         <activity android:name="com.powersoft.foodiepal_culinarycompanion.activities.RecipeDetailActivity" />

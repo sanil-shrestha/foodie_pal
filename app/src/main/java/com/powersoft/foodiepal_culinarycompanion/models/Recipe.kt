@@ -12,5 +12,6 @@ data class Recipe(
     val image: Int,
     val userRating: Float,
     val imagePath: String? = null,
-    val description: String? = null
+    val description: String? = null,
+    val ingredients: List<String>
 ) : Parcelable

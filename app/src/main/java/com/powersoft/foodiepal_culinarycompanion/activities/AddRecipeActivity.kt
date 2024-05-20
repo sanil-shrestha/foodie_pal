@@ -35,13 +35,11 @@ class AddRecipeActivity : AppCompatActivity() {
         b = ActivityAddRecipeBinding.inflate(layoutInflater)
         setContentView(b.root)
 
-//        b.imgBack.setOnClickListener { super.onBackPressed() }
+        b.imgBack.setOnClickListener { super.onBackPressed() }
 
-        // Check for permissions
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
             !== PackageManager.PERMISSION_GRANTED
         ) {
-            // Permission is not granted
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
@@ -49,19 +47,20 @@ class AddRecipeActivity : AppCompatActivity() {
             )
         }
 
-//        b.imgRecipe.setOnClickListener {
-//            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-//        }
+        b.imgRecipe.setOnClickListener {
+            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        }
 
         b.btnAddRecipe.setOnClickListener {
-//            if (!validate()) return@setOnClickListener
+            if (!validate()) return@setOnClickListener
 
             val recipeName = b.etRecipeName.text.toString()
             val time = b.etTime.text.toString()
             val rating = b.ratingBar.rating
             val description = b.foodDescription.text.toString()
+            val ingredientsList = b.ingredients.text.toString().split(",").map { it.trim() }
 
-            val recipe = Recipe(recipeName, time, 0, rating, photoUrl.toString(), description)
+            val recipe = Recipe(recipeName, time, 0, rating, photoUrl.toString(), description, ingredientsList)
 
             val intent = Intent()
             intent.putExtra("recipe", recipe)
@@ -81,6 +80,14 @@ class AddRecipeActivity : AppCompatActivity() {
         } else if (b.etTime.text.isEmpty()) {
             b.etTime.error = "Time is required!!"
             b.etTime.requestFocus()
+            return false
+        } else if(b.ingredients.text.isEmpty()){
+            b.ingredients.error = "Ingredients are required!!"
+            b.ingredients.requestFocus()
+            return false
+        } else if (b.foodDescription.text.isEmpty()) {
+            b.foodDescription.error = "Description is required!!"
+            b.foodDescription.requestFocus()
             return false
         }
         return true
